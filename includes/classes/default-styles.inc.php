@@ -8,9 +8,6 @@ You should have received a copy of the GNU General Public License,
 along with this software. In the main directory, see: /licensing/
 If not, see: <http://www.gnu.org/licenses/>.
 */
-/*
-Direct access denial.
-*/
 if (realpath (__FILE__) === realpath ($_SERVER["SCRIPT_FILENAME"]))
 	exit ("Do not access this file directly.");
 /**/
@@ -45,7 +42,7 @@ if (!class_exists ("c_ws_plugin__super_news_default_styles"))
 					{
 						do_action ("ws_plugin__super_news_before_search_styles", get_defined_vars ());
 						/**/
-						if (c_ws_plugin__super_news_utils_conds::is_blog_admin () && $_GET["page"] === "ws-plugin--super-news-search")
+						if (is_blog_admin () && $_GET["page"] === "ws-plugin--super-news-search")
 							{
 								wp_enqueue_style ("ws-plugin--super-news", site_url ("/?ws_plugin__super_news_css=1"), array (), c_ws_plugin__super_news_utilities::ver_checksum (), "all");
 								/**/

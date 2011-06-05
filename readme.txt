@@ -1,17 +1,17 @@
 === Super News ( Search Related News ) ===
 
-Version: 1.2.2
-Stable tag: 1.2.2
-Framework: WS-P-3.5
+Version: 110523
+Stable tag: 110523
+Framework: WS-P-110523
 
 SSL Compatible: yes
 WordPress Compatible: yes
 WP Multisite Compatible: yes
 Multisite Blog Farm Compatible: yes
 
-Tested up to: 3.1.1
-Requires at least: 3.0
-Requires: WordPress® 3.0+, PHP 5.2.3+
+Tested up to: 3.1.3
+Requires at least: 3.1
+Requires: WordPress® 3.1+, PHP 5.2.3+
 
 Copyright: © 2009 WebSharks, Inc.
 License: GNU General Public License
@@ -22,6 +22,7 @@ Donate link: http://www.primothemes.com/donate/
 
 Plugin Name: Super News
 Forum URI: http://www.primothemes.com/forums/viewforum.php?f=6
+Privacy URI: http://www.primothemes.com/about/privacy-policy/
 Plugin URI: http://www.primothemes.com/post/product/super-news-plugin-for-wordpress/
 Description: Prepares bloggable news content ( based on specific search terms that you supply ) from other WordPress® powered sites. Great for pinging related news articles!
 Tags: news, pings, pingbacks, trackbacks, related, related news, related blogs, related articles, related posts, related content, options panel included, websharks framework, w3c validated code, includes extensive documentation, highly extensible
@@ -74,6 +75,10 @@ At the time of this writing, WebSnapr® has a limit of 100k thumbnails per month
 Unfortunately, no. The Google® API only provides 8 results per page, with a maximum of 8 pages ( so that's 64 total results ) returned for each of your searches. There is no way to increase this upper limit. Google® purposely imposes this limit, and there is no way around it; short of working a deal with Google® directly. All of that being said, Super News DOES integrate a feature that allows you to + Add Results to an existing Result Set. Using this technique, you can build lists of unlimited size.
 
 == Changelog ==
+
+= 110523 =
+* **Versioning.** Starting with this release, versions will follow this format: `yymmdd`. The version for this release is: `110523`.
+* Routine maintenance. No signifigant changes.
 
 = 1.2.2 =
 * Routine maintenance. No signifigant changes.

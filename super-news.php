@@ -9,18 +9,18 @@ along with this software. In the main directory, see: /licensing/
 If not, see: <http://www.gnu.org/licenses/>.
 */
 /*
-Version: 1.2.2
-Stable tag: 1.2.2
-Framework: WS-P-3.5
+Version: 110523
+Stable tag: 110523
+Framework: WS-P-110523
 
 SSL Compatible: yes
 WordPress Compatible: yes
 WP Multisite Compatible: yes
 Multisite Blog Farm Compatible: yes
 
-Tested up to: 3.1.1
-Requires at least: 3.0
-Requires: WordPress® 3.0+, PHP 5.2.3+
+Tested up to: 3.1.3
+Requires at least: 3.1
+Requires: WordPress® 3.1+, PHP 5.2.3+
 
 Copyright: © 2009 WebSharks, Inc.
 License: GNU General Public License
@@ -31,22 +31,20 @@ Donate link: http://www.primothemes.com/donate/
 
 Plugin Name: Super News
 Forum URI: http://www.primothemes.com/forums/viewforum.php?f=6
+Privacy URI: http://www.primothemes.com/about/privacy-policy/
 Plugin URI: http://www.primothemes.com/post/product/super-news-plugin-for-wordpress/
 Description: Prepares bloggable news content ( based on specific search terms that you supply ) from other WordPress® powered sites. Great for pinging related news articles!
 Tags: news, pings, pingbacks, trackbacks, related, related news, related blogs, related articles, related posts, related content, options panel included, websharks framework, w3c validated code, includes extensive documentation, highly extensible
-*/
-/*
-Direct access denial.
 */
 if (realpath (__FILE__) === realpath ($_SERVER["SCRIPT_FILENAME"]))
 	exit ("Do not access this file directly.");
 /*
 Define versions.
 */
-@define ("WS_PLUGIN__SUPER_NEWS_VERSION", "1.2.2");
+@define ("WS_PLUGIN__SUPER_NEWS_VERSION", "110523");
 @define ("WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION", "5.2.3");
-@define ("WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION", "3.0");
-@define ("WS_PLUGIN__SUPER_NEWS_MIN_PRO_VERSION", "1.0");
+@define ("WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION", "3.1");
+@define ("WS_PLUGIN__SUPER_NEWS_MIN_PRO_VERSION", "110523");
 /*
 Compatibility checks.
 */
@@ -95,11 +93,11 @@ else if (is_admin ()) /* Admin compatibility errors. */
 	{
 		if (!version_compare (PHP_VERSION, WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION, ">="))
 			{
-				add_action (( (version_compare (get_bloginfo ("version"), "3.1-RC", ">=")) ? "all_admin_notices" : "admin_notices"), create_function ('', 'echo \'<div class="error fade"><p>You need PHP v\' . WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION . \'+ to use the Super News plugin.</p></div>\';'));
+				add_action ("all_admin_notices", create_function ('', 'echo \'<div class="error fade"><p>You need PHP v\' . WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION . \'+ to use the Super News plugin.</p></div>\';'));
 			}
 		else if (!version_compare (get_bloginfo ("version"), WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION, ">="))
 			{
-				add_action (( (version_compare (get_bloginfo ("version"), "3.1-RC", ">=")) ? "all_admin_notices" : "admin_notices"), create_function ('', 'echo \'<div class="error fade"><p>You need WordPress® v\' . WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION . \'+ to use the Super News plugin.</p></div>\';'));
+				add_action ("all_admin_notices", create_function ('', 'echo \'<div class="error fade"><p>You need WordPress® v\' . WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION . \'+ to use the Super News plugin.</p></div>\';'));
 			}
 	}
 ?>
