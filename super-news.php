@@ -9,8 +9,8 @@ along with this software. In the main directory, see: /licensing/
 If not, see: <http://www.gnu.org/licenses/>.
 */
 /*
-Version: 110523
-Stable tag: 110523
+Version: 110708
+Stable tag: 110708
 Framework: WS-P-110523
 
 SSL Compatible: yes
@@ -18,7 +18,7 @@ WordPress Compatible: yes
 WP Multisite Compatible: yes
 Multisite Blog Farm Compatible: yes
 
-Tested up to: 3.1.3
+Tested up to: 3.2
 Requires at least: 3.1
 Requires: WordPress® 3.1+, PHP 5.2.3+
 
@@ -37,14 +37,14 @@ Description: Prepares bloggable news content ( based on specific search terms th
 Tags: news, pings, pingbacks, trackbacks, related, related news, related blogs, related articles, related posts, related content, options panel included, websharks framework, w3c validated code, includes extensive documentation, highly extensible
 */
 if (realpath (__FILE__) === realpath ($_SERVER["SCRIPT_FILENAME"]))
-	exit ("Do not access this file directly.");
+	exit("Do not access this file directly.");
 /*
 Define versions.
 */
-@define ("WS_PLUGIN__SUPER_NEWS_VERSION", "110523");
+@define ("WS_PLUGIN__SUPER_NEWS_VERSION", "110708");
 @define ("WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION", "5.2.3");
 @define ("WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION", "3.1");
-@define ("WS_PLUGIN__SUPER_NEWS_MIN_PRO_VERSION", "110523");
+@define ("WS_PLUGIN__SUPER_NEWS_MIN_PRO_VERSION", "110708");
 /*
 Compatibility checks.
 */
@@ -54,7 +54,7 @@ if (version_compare (PHP_VERSION, WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION, ">=") &
 		/*
 		Hook before loaded.
 		*/
-		do_action ("ws_plugin__super_news_before_loaded");
+		do_action("ws_plugin__super_news_before_loaded");
 		/*
 		System configuraton.
 		*/
@@ -66,7 +66,7 @@ if (version_compare (PHP_VERSION, WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION, ">=") &
 		/*
 		Hook after system config & hooks are loaded.
 		*/
-		do_action ("ws_plugin__super_news_config_hooks_loaded");
+		do_action("ws_plugin__super_news_config_hooks_loaded");
 		/*
 		Load a possible Pro module, if/when available.
 		*/
@@ -87,7 +87,7 @@ if (version_compare (PHP_VERSION, WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION, ">=") &
 		/*
 		Hook after loaded.
 		*/
-		do_action ("ws_plugin__super_news_after_loaded");
+		do_action("ws_plugin__super_news_after_loaded");
 	}
 else if (is_admin ()) /* Admin compatibility errors. */
 	{

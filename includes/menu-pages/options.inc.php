@@ -16,9 +16,7 @@ Options page.
 echo '<div class="wrap ws-menu-page">' . "\n";
 /**/
 echo '<div id="icon-plugins" class="icon32"><br /></div>' . "\n";
-echo '<h2><div>Developed by <a href="' . esc_attr (c_ws_plugin__super_news_readmes::parse_readme_value ("Plugin URI")) . '" target="_blank"><img src="' . esc_attr ($GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["dir_url"]) . '/images/brand-light.png" alt="." /></a></div>Super News Options</h2>' . "\n";
-/**/
-echo '<div class="ws-menu-page-hr"></div>' . "\n";
+echo '<h2>Super News Options</h2>' . "\n";
 /**/
 echo '<table class="ws-menu-page-table">' . "\n";
 echo '<tbody class="ws-menu-page-table-tbody">' . "\n";
