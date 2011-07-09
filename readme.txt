@@ -1,7 +1,7 @@
 === Super News ( Search Related News ) ===
 
-Version: 110708
-Stable tag: 110708
+Version: 110709
+Stable tag: 110709
 Framework: WS-P-110523
 
 SSL Compatible: yes
@@ -75,6 +75,9 @@ At the time of this writing, WebSnapr® has a limit of 100k thumbnails per month
 Unfortunately, no. The Google® API only provides 8 results per page, with a maximum of 8 pages ( so that's 64 total results ) returned for each of your searches. There is no way to increase this upper limit. Google® purposely imposes this limit, and there is no way around it; short of working a deal with Google® directly. All of that being said, Super News DOES integrate a feature that allows you to + Add Results to an existing Result Set. Using this technique, you can build lists of unlimited size.
 
 == Changelog ==
+
+= 110709 =
+* Routine maintenance. No signifigant changes.
 
 = 110708 =
 * Routine maintenance. No signifigant changes.
