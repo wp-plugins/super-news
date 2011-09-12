@@ -9,9 +9,9 @@ WordPress Compatible: yes
 WP Multisite Compatible: yes
 Multisite Blog Farm Compatible: yes
 
-Tested up to: 3.2
-Requires at least: 3.1
-Requires: WordPress® 3.1+, PHP 5.2.3+
+Tested up to: 3.2.1
+Requires at least: 3.2
+Requires: WordPress® 3.2+, PHP 5.2.3+
 
 Copyright: © 2009 WebSharks, Inc.
 License: GNU General Public License

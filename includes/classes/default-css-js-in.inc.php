@@ -9,7 +9,7 @@ along with this software. In the main directory, see: /licensing/
 If not, see: <http://www.gnu.org/licenses/>.
 */
 if (realpath (__FILE__) === realpath ($_SERVER["SCRIPT_FILENAME"]))
-	exit ("Do not access this file directly.");
+	exit("Do not access this file directly.");
 /**/
 if (!class_exists ("c_ws_plugin__super_news_default_css_js_in"))
 	{
@@ -25,16 +25,21 @@ if (!class_exists ("c_ws_plugin__super_news_default_css_js_in"))
 						/**/
 						if ($_GET["ws_plugin__super_news_css"]) /* Incoming request? */
 							{
-								header ("Content-Type: text/css; charset=utf-8");
-								header ("Expires: " . gmdate ("D, d M Y H:i:s", strtotime ("+1 week")) . " GMT");
-								header ("Last-Modified: " . gmdate ("D, d M Y H:i:s") . " GMT");
-								header ("Cache-Control: max-age=604800");
-								header ("Pragma: public");
+								@ini_set ("zlib.output_compression", 0);
+								/**/
+								status_header(200); /* 200 OK status header. */
+								header("Content-Type: text/css; charset=utf-8");
+								header("Expires: " . gmdate ("D, d M Y H:i:s", strtotime ("+1 week")) . " GMT");
+								header("Last-Modified: " . gmdate ("D, d M Y H:i:s") . " GMT");
+								header("Cache-Control: max-age=604800");
+								header("Pragma: public");
+								/**/
+								eval('while (@ob_end_clean ());'); /* Clean buffers. */
 								/**/
 								$u = $GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["dir_url"];
 								$i = $GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["dir_url"] . "/images";
 								/**/
-								ob_start ("c_ws_plugin__super_news_utils_css::compress_css");
+								ob_start("c_ws_plugin__super_news_utils_css::compress_css");
 								/**/
 								include_once dirname (dirname (__FILE__)) . "/super-news.css";
 								/**/

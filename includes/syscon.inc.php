@@ -29,6 +29,10 @@ Configure the right menu options panel for this software.
 */
 $GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["menu_pages"] = array ("installation" => false, "tools" => true, "videos" => false, "support" => true, "donations" => true);
 /*
+Configure multibyte detection order when charset is unknown ( used by calls to `mb_convert_encoding()` ).
+*/
+$GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["mb_detection_order"] = "UTF-8, ISO-8859-1, WINDOWS-1252, ASCII, JIS, EUC-JP, SJIS";
+/*
 Configure checksum time for the syscon.inc.php file.
 */
 $GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["checksum"] = filemtime (__FILE__);
@@ -61,7 +65,7 @@ if (!function_exists ("ws_plugin__super_news_configure_options_and_their_default
 				/*
 				Here they are merged. User options will overwrite some or all default values. 
 				*/
-				$GLOBALS["WS_PLUGIN__"]["super_news"]["o"] = array_merge ($default_options, ( ($options !== false) ? (array)$options : (array)get_option ("ws_plugin__super_news_options")));
+				$GLOBALS["WS_PLUGIN__"]["super_news"]["o"] = array_merge ($default_options, (($options !== false) ? (array)$options : (array)get_option ("ws_plugin__super_news_options")));
 				/*
 				This builds an MD5 checksum for the full array of options. This also includes the config checksum and the current set of default options. 
 				*/

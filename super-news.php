@@ -18,9 +18,9 @@ WordPress Compatible: yes
 WP Multisite Compatible: yes
 Multisite Blog Farm Compatible: yes
 
-Tested up to: 3.2
-Requires at least: 3.1
-Requires: WordPress® 3.1+, PHP 5.2.3+
+Tested up to: 3.2.1
+Requires at least: 3.2
+Requires: WordPress® 3.2+, PHP 5.2.3+
 
 Copyright: © 2009 WebSharks, Inc.
 License: GNU General Public License
@@ -43,7 +43,7 @@ Define versions.
 */
 @define ("WS_PLUGIN__SUPER_NEWS_VERSION", "110709");
 @define ("WS_PLUGIN__SUPER_NEWS_MIN_PHP_VERSION", "5.2.3");
-@define ("WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION", "3.1");
+@define ("WS_PLUGIN__SUPER_NEWS_MIN_WP_VERSION", "3.2");
 @define ("WS_PLUGIN__SUPER_NEWS_MIN_PRO_VERSION", "110709");
 /*
 Compatibility checks.

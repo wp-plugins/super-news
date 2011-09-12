@@ -20,7 +20,7 @@ if (!class_exists ("c_ws_plugin__super_news_readmes"))
 				*/
 				public static function parse_readme ($specific_path = FALSE, $specific_section = FALSE, $_blank_targets = TRUE, $process_wp_syntax = FALSE)
 					{
-						if (! ($path = $specific_path)) /* Was a specific path passed in? */
+						if (!($path = $specific_path)) /* Was a specific path passed in? */
 							{
 								$path = dirname (dirname (dirname (__FILE__))) . "/readme.txt";
 								$dev_path = dirname (dirname (dirname (__FILE__))) . "/readme-dev.txt";
@@ -40,7 +40,7 @@ if (!class_exists ("c_ws_plugin__super_news_readmes"))
 									include_once dirname (dirname (__FILE__)) . "/_xtnls/markdown/nc-markdown.inc.php";
 								/**/
 								$rm = file_get_contents ($path); /* Get readme.txt file contents. */
-								$mb = function_exists ("mb_convert_encoding") ? @mb_convert_encoding ($rm, "UTF-8",@mb_detect_encoding ($rm, "WINDOWS-1252, UTF-8")) : $rm;
+								$mb = function_exists ("mb_convert_encoding") ? @mb_convert_encoding ($rm, "UTF-8", $GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["mb_detection_order"]) : $rm;
 								$rm = ($mb) ? $mb : $rm; /* Double check this, just in case conversion fails on an unpredicted charset. */
 								/**/
 								if ($specific_section) /* If we are ONLY parsing a specific section. This is a very useful way of pulling details out. */
@@ -167,7 +167,7 @@ if (!class_exists ("c_ws_plugin__super_news_readmes"))
 					{
 						static $readme = array (); /* For repeated lookups across different paths. */
 						/**/
-						if (! ($path = $specific_path)) /* Was a specific path passed in? */
+						if (!($path = $specific_path)) /* Was a specific path passed in? */
 							{
 								$path = dirname (dirname (dirname (__FILE__))) . "/readme.txt";
 								$dev_path = dirname (dirname (dirname (__FILE__))) . "/readme-dev.txt";
@@ -183,7 +183,7 @@ if (!class_exists ("c_ws_plugin__super_news_readmes"))
 								if (!$readme[$path]) /* If not already opened, we need open it up now. */
 									{
 										$readme[$path] = file_get_contents ($path); /* Get readme.txt file contents. */
-										$mb = function_exists ("mb_convert_encoding") ? @mb_convert_encoding ($readme[$path], "UTF-8",@mb_detect_encoding ($readme[$path], "WINDOWS-1252, UTF-8")) : $readme[$path];
+										$mb = function_exists ("mb_convert_encoding") ? @mb_convert_encoding ($readme[$path], "UTF-8", $GLOBALS["WS_PLUGIN__"]["super_news"]["c"]["mb_detection_order"]) : $readme[$path];
 										$readme[$path] = ($mb) ? $mb : $readme[$path]; /* Double check this, just in case conversion fails on an unpredicted charset. */
 									}
 								/**/
